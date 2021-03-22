@@ -18,7 +18,7 @@ jobs:
           github-token: "deadc0de"
           debug: true
           script: |
-            console.log(secrets.github_token)
+            console.log(${{secrets.github_token}})
             console.log(process.env.COMMENT_BODY)
             return process.env.COMMENT_ID
           result-encoding: string
