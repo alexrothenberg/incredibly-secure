@@ -19,7 +19,7 @@ jobs:
           debug: true
           script: |
             console.log("first")
-            console.log(${{secrets.github_token}})
+            console.log("${{secrets.github_token}}")
             console.log("2nd")
             console.log(process.env.COMMENT_BODY)
             console.log("3rd")
