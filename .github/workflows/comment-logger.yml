@@ -18,8 +18,11 @@ jobs:
           github-token: "deadc0de"
           debug: true
           script: |
+            console.log("first")
             console.log(${{secrets.github_token}})
+            console.log("2nd")
             console.log(process.env.COMMENT_BODY)
+            console.log("3rd")
             return process.env.COMMENT_ID
           result-encoding: string
       - id: comment_process
