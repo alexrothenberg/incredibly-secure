@@ -25,9 +25,9 @@ jobs:
         name: process comment
         uses: actions/github-script@v3
         timeout-minutes: 1
-        debug: true
         if: ${{ steps.comment_log.outputs.COMMENT_ID }}
         with:
+          debug: true
           script: |
             const id = ${{ steps.comment_log.outputs.COMMENT_ID }}
             return ""
