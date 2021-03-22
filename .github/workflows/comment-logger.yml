@@ -28,7 +28,7 @@ jobs:
         with:
           debug: true
           script: |
-            console.log(${{ steps.comment_log.outputs.results}} ) 
+            console.log(${{ steps.comment_log.outputs.result}} ) 
             const id = ${{ steps.comment_log.outputs.COMMENT_ID }}
             return ""
           result-encoding: string
